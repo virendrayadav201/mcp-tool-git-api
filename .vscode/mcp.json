@@ -1,0 +1,38 @@
+{
+	"servers": {
+		"my-mcp-server-d1f94002": {
+			"type": "stdio",
+			"command": "fastmcp",
+			"args": [
+				"run",
+				"testmcp.py"
+			]
+		},
+		"my-mcp-server-741b11b9": {
+			"type": "stdio",
+			"command": "fastmcp",
+			"args": [
+				"run",
+				"githubMCP.py"
+			],
+			"inputs": [
+				{
+					"type": "promptString",
+					"id": "owner",
+					"description": "GitHub repository owner (username)"
+				},
+				{
+					"type": "promptString",
+					"id": "repo",
+					"description": "GitHub repository name"
+				},
+				{
+					"type": "promptString",
+					"id": "token",
+					"description": "GitHub Personal Access Token",
+					"password": true
+				}
+			]
+		}
+	}
+}
